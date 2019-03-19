@@ -1,15 +1,17 @@
+require('dotenv').config();
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { User } from './user.model';
+import { environment } from "../../environments/environment"; 
 import { CognitoUserPool, CognitoUserAttribute, CognitoUser, AuthenticationDetails, CognitoUserSession } from 'amazon-cognito-identity-js';
 
 
 const POOL_DATA = {
-  UserPoolId: 'us-west-2_OGwFt0BLz',
-  ClientId: '7dpohl6olgg8d0pbhkdsgrgp5k'
+  UserPoolId: environment.USERPOOL,
+  ClientId: environment.CLIENTID
 }
 
 const userPool = new CognitoUserPool(POOL_DATA);
