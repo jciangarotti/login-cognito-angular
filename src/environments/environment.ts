@@ -7,5 +7,5 @@ export const environment = {
   production: false,
   dev: "../.env",
   USERPOOL:'',
-  CLIENTID:'7dpohl6olgg8d0pbhkdsgrgp5k'
+  CLIENTID:''
 };
